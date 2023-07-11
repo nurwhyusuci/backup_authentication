@@ -1,0 +1,94 @@
+// Cretae a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "nurwahyu suci",
+    "email": "admin@gmail.com",
+    "password": "abcd1234",
+    "confPassword": "abcd1234",
+    "role": "admin"
+}
+
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+// get Single User
+GET http://localhost:5000/users/786f8146-bdc0-40f1-a1d2-7b4e7a4f8562
+
+### 
+// update a user
+PATCH http://localhost:5000/users/786f8146-bdc0-40f1-a1d2-7b4e7a4f8562
+Content-Type: application/json
+
+{
+    "name": "uci Updated",
+    "email": "uci@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+### 
+// delete a user
+DELETE http://localhost:5000/users/786f8146-bdc0-40f1-a1d2-7b4e7a4f8562
+
+###
+// login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "abcd1234"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "uci@gmail.com",
+    "password": "abcd1234"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout/eca7fbac-b47f-486c-8bc5-6534d5506545
+
+
+###
+// Get All Productts
+GET http://localhost:5000/products
+
+###
+// Get Single Productts
+GET http://localhost:5000/products/f6351d14-40e0-4969-a86d-49267b502365
+
+###
+// POST Data Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 7",
+    "price": 9977
+}
+
+###
+// POST Data Product
+PATCH http://localhost:5000/products/c25662dc-9ac3-4e80-bc98-2b42b59cb2f3
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 979
+}
+
+
+###
+DELETE http://localhost:5000/products/f6351d14-40e0-4969-a86d-49267b502365
